@@ -1,0 +1,7 @@
+[2019-09-01 10:59:50,054] INFO Expiring session 0x1001239ba6d0027, timeout of 6000ms exceeded (org.apache.zookeeper.server.ZooKeeperServer)
+[2019-09-01 10:59:55,699] INFO Expiring session 0x1001239ba6d0029, timeout of 6000ms exceeded (org.apache.zookeeper.server.ZooKeeperServer)
+[2019-09-01 10:59:55,700] INFO Expiring session 0x1001239ba6d0028, timeout of 6000ms exceeded (org.apache.zookeeper.server.ZooKeeperServer)
+[2019-09-01 10:59:55,701] INFO Processed session termination for sessionid: 0x1001239ba6d0027 (org.apache.zookeeper.server.PrepRequestProcessor)
+[2019-09-01 10:59:55,701] INFO Processed session termination for sessionid: 0x1001239ba6d0029 (org.apache.zookeeper.server.PrepRequestProcessor)
+[2019-09-01 10:59:55,701] INFO Processed session termination for sessionid: 0x1001239ba6d0028 (org.apache.zookeeper.server.PrepRequestProcessor)
+[2019-09-01 10:59:56,910] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:51752 which had sessionid 0x1001239ba6d0027 (org.apache.zookeeper.server.NIOServerCnxn)

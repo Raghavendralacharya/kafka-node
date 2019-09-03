@@ -1,0 +1,7 @@
+[2019-08-26 17:01:46,959] DEBUG [Controller id=0] Resigning (kafka.controller.KafkaController)
+[2019-08-26 17:01:46,961] DEBUG [Controller id=0] Unregister BrokerModifications handler for Set() (kafka.controller.KafkaController)
+[2019-08-26 17:01:46,962] INFO [PartitionStateMachine controllerId=0] Stopped partition state machine (kafka.controller.ZkPartitionStateMachine)
+[2019-08-26 17:01:46,962] INFO [ReplicaStateMachine controllerId=0] Stopped replica state machine (kafka.controller.ZkReplicaStateMachine)
+[2019-08-26 17:01:46,963] INFO [Controller id=0] Resigned (kafka.controller.KafkaController)
+[2019-08-26 17:01:48,747] DEBUG [Controller id=0] Broker 2 was elected as controller instead of broker 0 (kafka.controller.KafkaController)
+org.apache.kafka.common.errors.ControllerMovedException: Controller moved to another broker. Aborting controller startup procedure

@@ -1,0 +1,3 @@
+[2019-08-30 18:01:31,637] INFO [GroupMetadataManager brokerId=2] Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2019-08-30 18:06:19,909] INFO Creating topic testTopic4 with configuration {} and initial partition assignment Map(1 -> ArrayBuffer(0), 0 -> ArrayBuffer(1)) (kafka.zk.AdminZkClient)
+[2019-08-30 18:11:31,623] INFO [GroupMetadataManager brokerId=2] Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
