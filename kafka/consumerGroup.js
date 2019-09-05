@@ -3,26 +3,21 @@ var async = require('async');
 
 function initiateKafkaConsumerGroup(groupName, topicName) {
     var consumerOptions = {
-        host: 'localhost:2181',
+        //host: 'localhost:2181',
+        kafkahost:'localhost:9092',
         groupId: groupName,
         autoCommit: true,
         autoCommitIntervalMs: 1000,
         sessionTimeout: 15000,
         fetchMaxBytes: 10 * 1024 * 1024, // 10 MB
-        protocol: ['roundrobin'],
-        fromOffset: 'earliest',
+        protocol: ['range'],
+        fromOffset: 'earliest'
     };
 
-    var consumerG1C1 = new kafka.ConsumerGroup(Object.assign({ id: 'consumer1' }, consumerOptions), topicName);
-    var consumerG1C2 = new kafka.ConsumerGroup(Object.assign({ id: 'consumer2' }, consumerOptions), topicName);
-    var consumerG1C3 = new kafka.ConsumerGroup(Object.assign({ id: 'consumer3' }, consumerOptions), topicName);
+    var consumer = new kafka.ConsumerGroup(Object.assign({ id: 'consumer' }, consumerOptions), topicName);
 
-    consumerG1C1.on('message', onMessage)
-    consumerG1C1.on('error', onError)
-    consumerG1C2.on('message', onMessage);
-    consumerG1C2.on('error', onError)
-    consumerG1C3.on('message', onMessage)
-    consumerG1C3.on('error', onError)
+    consumer.on('message', onMessage)
+    consumer.on('error', onError)
 
 
     function onError(error) {
@@ -41,7 +36,7 @@ function initiateKafkaConsumerGroup(groupName, topicName) {
     }
 
     process.once('SIGINT', function () {
-        async.each([consumerG1C1,consumerG1C2,consumerG1C3], function (consumer, callback) {
+        async.each([consumer], function (consumer, callback) {
             consumer.close(true, function(error) {
                 if (error) {
                     console.log("Consuming closed with error", error);
